@@ -37,7 +37,7 @@ export const ScrollToTop = () => {
                 onClick={scrollToTop}
                 className={cn(
                     isVisible ? 'opacity-100' : 'opacity-0',
-                    'bg-red-950 hover:bg-red-950 focus:ring-red-900 inline-flex items-center rounded-full p-3 text-white shadow-sm transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2'
+                    'bg-indigo-950 hover:bg-indigo-950 focus:ring-indigo-900 inline-flex items-center rounded-full p-3 text-white shadow-sm transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2'
                 )}
             >
                 <ArrowUp />
