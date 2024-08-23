@@ -16,11 +16,34 @@ import {
 import { Menu } from 'lucide-react';
 import { navLinks } from '@/constant/constant';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function Navbar() {
     const pathname = usePathname();
+    const [isVisible, setIsVisible] = useState(false);
+    const toggleVisibility = () => {
+        if (window.scrollY >= 30) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisibility);
+
+        return () => {
+            window.removeEventListener('scroll', toggleVisibility);
+        };
+    }, []);
+
     return (
-        <header className="sticky top-0 z-50 w-full bg-indigo-700">
+        <header
+            className={cn(
+                isVisible ? 'bg-indigo-700' : 'bg-indigo-950',
+                'sticky top-0 z-50 w-full transition-all duration-200'
+            )}
+        >
             <div className="flex h-20 gap-1 items-center justify-between w-4/5 mx-auto">
                 <div>
                     <Link className="block" href="/">

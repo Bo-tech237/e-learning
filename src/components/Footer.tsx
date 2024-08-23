@@ -95,7 +95,7 @@ export default function Footer() {
                 </div>
             </div>
             <p className="text-center mt-4 text-base text-white opacity-70">
-                ©Copyright 2024 by webdev warriors
+                ©Copyright 2024 by Ferdinand technology
             </p>
         </div>
     );
